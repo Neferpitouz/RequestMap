@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars table</title>
+</head>
+<body>
+<h1>Table</h1>
+
+<table>
+  <thead>
+
+  </thead>
+  <tbody>
+  <tr th:each="row : ${carsTable}">
+    <td th:text="${row.getModel()}">Значение ячейки</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
