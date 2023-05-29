@@ -5,17 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import web.services.CarsServiceInt;
+import web.services.CarsService;
 
 
 @Controller
 public class CarsController {
 
-    private final CarsServiceInt carsServiceInt;
+    private final CarsService carsServiceInt;
 
     @Autowired
-    public CarsController(CarsServiceInt carsServiceInt) {
-        this.carsServiceInt = carsServiceInt;
+    public CarsController(CarsService carsService) {
+        this.carsServiceInt = carsService;
     }
 
     @GetMapping("/cars")
