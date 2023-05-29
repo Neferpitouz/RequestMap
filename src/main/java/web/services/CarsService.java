@@ -1,11 +1,13 @@
 package web.services;
 
+import org.springframework.stereotype.Component;
 import web.models.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarsService {
+@Component
+public class CarsService implements CarsServiceInt{
 
     private List<Car> cars = new ArrayList<>();
 
